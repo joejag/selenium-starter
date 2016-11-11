@@ -9,7 +9,7 @@ repositories {
     mavenCentral()
 }
 
-def seleniumVersion = '2.53.1'
+def seleniumVersion = '2.52.0'
 
 dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: seleniumVersion
