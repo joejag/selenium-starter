@@ -1,4 +1,4 @@
-package com.bettercode.seleniumstarter;
+package se.bettercode.seleniumstarter;
 
 import org.junit.After;
 import org.junit.Before;
