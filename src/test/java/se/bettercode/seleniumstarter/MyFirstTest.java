@@ -1,22 +1,26 @@
 package se.bettercode.seleniumstarter;
 
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
-import static org.junit.Assert.assertEquals;
+import java.net.URL;
 
-/**
- * Example Selenium test using HtmlUnitDriver
- */
 public class MyFirstTest {
 
-  @Test
-  public void goToWebPage() {
-    WebDriver driver = new HtmlUnitDriver();
-    driver.get("http://the-internet.herokuapp.com");
-    assertEquals("The Internet", driver.getTitle());
-    driver.quit();
-  }
+    @Test
+    public void goToWebPage() throws Exception {
+        System.setProperty("webdriver.chrome.driver", "/Users/joseph.wright/projects/scratch/selenium-starter/chromedrivermac");
+
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.google.com");
+
+        driver.quit();
+    }
 
 }
